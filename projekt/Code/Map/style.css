@@ -1,6 +1,10 @@
 #map {
-    height: 900px;  /* The height is 400 pixels */
-    width: 100%;  /* The width is the width of the web page */
+    top: 10%;
+    height: 75%;  /* The height is 400 pixels */
+    width: 98%;  /* The width is the width of the web page */
+    left: 1%;
+    margin:2px ;
+    padding-left: 5px;
    }
 
 .mediaViewInfo {
@@ -20,8 +24,8 @@
 }
 #Web_1920___4 {
     position: absolute;
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(180deg, rgba(63,44,233,1) 0%, rgba(40,33,112,1) 64.92%, rgba(39,32,105,1) 100%);
     overflow: hidden;
     --web-view-name: Web 1920 – 4;
@@ -39,20 +43,15 @@
     }
 
 }
-#Image_6 {
-    position: absolute;
-    width: 1920px;
-    height: 967px;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-}
+
 #Small_Button {
     position: absolute;
     width: 395px;
     height: 88px;
-    left: 790px;
-    top: 975px;
+    /* left: 790px; */
+    left : 41%;
+    /* top: 975px; */
+    top: 90%;
     overflow: visible;
 }
 .Rectangle_150 {
@@ -79,14 +78,14 @@
     font-size: 21px;
     color: rgba(255,255,255,1);
 }
-#pin {
+/* #pin {
     position: absolute;
     width: 57px;
     height: 57px;
     left: 932px;
     top: 427px;
     overflow: visible;
-}
+} */
 .Rectangle_617 {
     position: absolute;
     overflow: visible;

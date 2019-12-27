@@ -5,23 +5,54 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="Stylesheet" type="text/css" href="style.css" />   
-<title>Web 1920 – 4</title>
+<title>Parking</title>
+
+<div onclick="application.goToTargetView(event)" id="Menu">
+    <svg class="Rectangle_175">
+        <rect fill="transparent" id="Rectangle_175" rx="0" ry="0" x="0" y="0" width="58" height="58">
+        </rect>
+    </svg>
+    <svg class="Union_4" viewBox="0 0 97 56">
+        <!-- 77,63,209,1 -->
+        <path fill="rgba(255,255,255,1)" id="Union_4" d="M 0 56 L 0 47.99742889404297 L 48.5 47.99742889404297 L 48.5 56 L 0 56 Z M 0 31.99948501586914 L 0 24.00051498413086 L 97 24.00051498413086 L 97 31.99948501586914 L 0 31.99948501586914 Z M 0 7.998971462249756 L 0 0 L 97 0 L 97 7.998971462249756 L 0 7.998971462249756 Z">
+        </path>
+    </svg>
+</div>
 <div id="Web_1920___4" style="transform-origin: 0px 0px;">
 	<div id="map"></div>
     <script>
 // Initialize and add the map
 function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+    map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+  //AIzaSyCABcTdxOygki6CueFbJmobFo_P50DFizQ
 }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCABcTdxOygki6CueFbJmobFo_P50DFizQ&callback=initMap">
     </script>
 
 
@@ -33,25 +64,5 @@ function initMap() {
 		<div id="PARKED_HERE">
 			<span>PARKED HERE</span>
 		</div>
-	</div>
-	<!-- <div id="pin">
-		<svg class="Rectangle_617">
-			<rect fill="transparent" id="Rectangle_617" rx="0" ry="0" x="0" y="0" width="57" height="57">
-			</rect>
-		</svg>
-		<svg class="Path_166" viewBox="0.025 -0.05 46.889 56.905">
-			<path fill="rgba(38,153,251,1)" id="Path_166" d="M 23.33636474609375 33.80909729003906 C 29.00909614562988 33.80909729003906 33.26363754272461 29.20000076293945 33.26363754272461 23.88182067871094 C 33.26363754272461 18.56363677978516 29.00909614562988 13.60000228881836 23.33636474609375 13.60000228881836 C 17.66363716125488 13.60000228881836 13.40909194946289 18.20909118652344 13.40909194946289 23.52727508544922 C 13.40909194946289 28.845458984375 18.0181827545166 33.80909729003906 23.33636474609375 33.80909729003906 Z M 6.672727584838867 6.86363697052002 C 15.89091014862061 -2.354545831680298 30.78182411193848 -2.354545831680298 40.00000762939453 6.86363697052002 C 49.21818923950195 16.08181953430176 49.21818923950195 30.97273063659668 40.00000762939453 40.19091415405273 L 23.33636474609375 56.85455322265625 L 6.672728061676025 40.19091796875 C -2.190909624099731 30.97273063659668 -2.190909624099731 16.08181953430176 6.672727584838867 6.86363697052002 Z">
-			</path>
-		</svg> -->
-	</div>
-	<div onclick="application.goToTargetView(event)" id="Menu">
-		<svg class="Rectangle_175">
-			<rect fill="transparent" id="Rectangle_175" rx="0" ry="0" x="0" y="0" width="58" height="58">
-			</rect>
-		</svg>
-		<svg class="Union_4" viewBox="0 0 97 56">
-			<path fill="rgba(77,63,209,1)" id="Union_4" d="M 0 56 L 0 47.99742889404297 L 48.5 47.99742889404297 L 48.5 56 L 0 56 Z M 0 31.99948501586914 L 0 24.00051498413086 L 97 24.00051498413086 L 97 31.99948501586914 L 0 31.99948501586914 Z M 0 7.998971462249756 L 0 0 L 97 0 L 97 7.998971462249756 L 0 7.998971462249756 Z">
-			</path>
-		</svg>
-	</div>
+	
 </div>
