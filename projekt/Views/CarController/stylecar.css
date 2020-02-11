@@ -1,0 +1,92 @@
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 110%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    margin: 0;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    align-items: center;
+  background: linear-gradient(180deg, rgba(63,44,233,1) 0%, rgba(40,33,112,1) 64.92%, rgba(39,32,105,1) 100%) no-repeat padding-box;
+}
+
+input {
+    padding-left: 0.5em;
+    margin: 0 1em 1em 1em;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 2em;
+
+    /* font */
+    color: #2699FB;
+    line-height: 2.5em;
+    font-size: 1em;
+}
+
+button {
+  position: absolute;
+  border: none;
+   width: 250px;
+   height: 100px;
+   left: 42%;
+   top: 92%;
+   color: white;
+   background: #266DFB 0% 0% no-repeat padding-box;
+   font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+   overflow: visible;
+   --web-animation: fadein 0.3s ease-out;
+   --web-action-type: page;
+   --web-action-target: Web_1920___4.html;
+   cursor: pointer;
+}
+
+#label{
+    color: rgb(255, 255, 255);
+    line-height: 2.5em;
+    font-size: 1em;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+
+}
+
+
+.label_2{
+    top: 5%;
+    color: rgb(255, 255, 255);
+    line-height: 2.5em;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+
+}
+
+#Dude {
+    top: 1%;
+    height: 10%;
+    width: 14%;
+}
+
+#wimc {
+    top: 5%;
+    height: 10%;
+    width: 14%;
+}
+
+.arrow {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
